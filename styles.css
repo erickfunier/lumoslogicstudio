@@ -43,6 +43,13 @@ h3 { font-size: 1.25rem; }
 .lede { max-width: 610px; margin: 25px 0 30px; color: var(--muted); font-size: 1.12rem; }
 .actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .hex-board { position: relative; min-height: 390px; display: grid; place-items: center; }
+.studio-orbit { position: relative; min-height: 390px; display: grid; place-items: center; filter: drop-shadow(0 22px 50px rgba(0,0,0,.35)); }
+.orbit { position: absolute; width: 300px; height: 160px; border: 1px solid rgba(98,230,228,.48); border-radius: 50%; transform: rotate(-25deg); }
+.orbit-two { width: 225px; height: 300px; border-color: rgba(155,140,255,.4); transform: rotate(34deg); }
+.orbit-core { position: relative; width: 116px; height: 116px; display: grid; place-items: center; border: 1px solid rgba(98,230,228,.72); border-radius: 50%; background: radial-gradient(circle, rgba(98,230,228,.92), rgba(25,54,84,.75) 48%, rgba(14,22,40,.5) 70%); box-shadow: 0 0 45px rgba(98,230,228,.25); }
+.orbit-core::after { content: ""; position: absolute; width: 180px; height: 180px; border: 1px solid rgba(98,230,228,.16); border-radius: 50%; }
+.orbit-core span { width: 34px; height: 34px; border-radius: 50%; background: #efffff; box-shadow: 0 0 30px 10px rgba(98,230,228,.7); }
+.orbit-node { position: absolute; width: 15px; height: 15px; border-radius: 50%; box-shadow: 0 0 18px 5px currentColor; }.node-cyan { top: 84px; left: 48px; color: var(--cyan); background: var(--cyan); }.node-violet { top: 78px; right: 53px; color: var(--violet); background: var(--violet); }.node-gold { bottom: 76px; right: 102px; color: var(--yellow); background: var(--yellow); }
 .hex-board::before { content: ""; position: absolute; inset: 16% 4%; background-image: linear-gradient(rgba(98,230,228,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(98,230,228,.1) 1px, transparent 1px); background-size: 42px 42px; mask-image: radial-gradient(circle, #000 10%, transparent 70%); transform: perspective(500px) rotateX(52deg) rotateZ(-14deg); }
 .board { position: relative; display: grid; grid-template-columns: repeat(3, 74px); gap: 9px; transform: rotate(-15deg); }
 .tile { width: 74px; height: 84px; display: grid; place-items: center; clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0 50%); background: #1a2741; box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
